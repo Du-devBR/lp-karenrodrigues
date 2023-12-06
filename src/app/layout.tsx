@@ -17,6 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <title>Karen Rodrigues Sobrancelhas</title>
+      </head>
       <body className={inter.className}>
         <Banner />
         {children}

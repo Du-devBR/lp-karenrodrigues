@@ -8,13 +8,7 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      container: {
-        center: true,
-        padding: '4rem',
-        screens: {
-          '2xl': '100%',
-        },
-      },
+
       colors: {
         black: '#000',
         white: '#fff',
