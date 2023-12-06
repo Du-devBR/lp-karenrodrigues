@@ -8,6 +8,13 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      container: {
+        center: true,
+        padding: '4rem',
+        screens: {
+          '2xl': '100%',
+        },
+      },
       colors: {
         black: '#000',
         white: '#fff',
@@ -35,12 +42,12 @@ const config: Config = {
           1000: "#1A1A1A",
         },
       },
-      screens: {
-        sm: '480px',
-        md: '768px',
-        lg: '976px',
-        xl: '1440px',
-      },
+      // screens: {
+      //   sm: '480px',
+      //   md: '768px',
+      //   lg: '976px',
+      //   xl: '1440px',
+      // },
       fontSize: {
         'banner_lg': ['3.75rem', {
           lineHeight: '3.5rem',
