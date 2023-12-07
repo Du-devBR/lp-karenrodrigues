@@ -44,15 +44,15 @@ const config: Config = {
       // },
       fontSize: {
         'banner_lg': ['3.75rem', {
-          lineHeight: '3.5rem',
-          letterSpacing: '0.09375rem',
+          lineHeight: '5rem',
+          letterSpacing: '0.875rem',
         }],
         'banner_md': ['2rem', {
           lineHeight: '3.5rem',
           letterSpacing: '0.0625rem',
         }],
         'banner_sm': ['1.5rem', {
-          lineHeight: '3.5rem',
+          lineHeight: '1.5rem',
           letterSpacing: '0.0625rem',
         }],
         '32': ['2rem', {

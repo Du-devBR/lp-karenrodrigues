@@ -9,11 +9,11 @@ export default function Header() {
 
   return (
     <>
-      <header className="h-24 relative flex flex-wrap justify-between items-center z-10 md:px-16 max-md:px-4">
+      <header className="h-24 relative flex flex-wrap justify-between items-center z-20 md:px-16 max-md:px-4">
         <Image src={logo} alt={"Letra K e R em formato de laço na cor rosa."} />
         <div className=" flex items-center justify-end gap-4 max-md:hidden">
           <MenuNav />
-          <div className=" w-20 h-6 bg-blue-400"></div>
+          {/* <div className=" w-20 h-6 bg-blue-400"></div> */}
         </div>
 
         <div
@@ -40,7 +40,7 @@ export default function Header() {
       <div
         className={`${
           hambuguer
-            ? " absolute w-full min-h-screen top-0 bg-gray-800 duration-700 visible "
+            ? " absolute w-full min-h-screen top-0 bg-gray-800 duration-700 visible z-10 "
             : " w-0 h-0"
         }`}
       >
