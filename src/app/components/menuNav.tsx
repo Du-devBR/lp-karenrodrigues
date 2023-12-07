@@ -10,6 +10,7 @@ interface MenuItem {
 
 interface Props {
   onHamburguer?: boolean;
+  onClosedHamburguer?: () => void;
 }
 
 const arrayMenu: MenuItem[] = [
@@ -19,7 +20,7 @@ const arrayMenu: MenuItem[] = [
   },
   {
     title: "sobre",
-    href: "#sobre",
+    href: "/#sobre",
   },
   {
     title: "galeria",
@@ -39,7 +40,7 @@ const arrayMenu: MenuItem[] = [
   },
 ];
 
-export default function MenuNav({ onHamburguer }: Props) {
+export default function MenuNav({ onHamburguer, onClosedHamburguer }: Props) {
   const [active, setActive] = useState("");
   return (
     <nav
@@ -54,7 +55,12 @@ export default function MenuNav({ onHamburguer }: Props) {
           className={`text-16 font-medium capitalize hover:text-brand-1000 duration-500  ${
             active === item.title ? "text-brand-1000" : "text-gray-100"
           }`}
-          onClick={() => setActive(item.title)}
+          onClick={() => {
+            setActive(item.title);
+            if (onClosedHamburguer) {
+              onClosedHamburguer();
+            }
+          }}
         >
           {item.title}
         </Link>

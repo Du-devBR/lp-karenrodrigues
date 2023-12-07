@@ -42,7 +42,10 @@ export default function Header() {
             : " w-0 h-0"
         }`}
       >
-        <MenuNav onHamburguer={hambuguer} />
+        <MenuNav
+          onHamburguer={hambuguer}
+          onClosedHamburguer={() => setHamburguer(false)}
+        />
       </div>
     </>
   );
