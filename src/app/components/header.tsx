@@ -13,9 +13,7 @@ export default function Header() {
         <Image src={logo} alt={"Letra K e R em formato de laço na cor rosa."} />
         <div className=" flex items-center justify-end gap-4 max-md:hidden">
           <MenuNav />
-          {/* <div className=" w-20 h-6 bg-blue-400"></div> */}
         </div>
-
         <div
           className=" md:hidden cursor-pointer relative"
           onClick={() => setHamburguer(!hambuguer)}

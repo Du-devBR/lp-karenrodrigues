@@ -19,7 +19,7 @@ const arrayMenu: MenuItem[] = [
   },
   {
     title: "sobre",
-    href: "",
+    href: "#sobre",
   },
   {
     title: "galeria",
