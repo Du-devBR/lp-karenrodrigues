@@ -75,6 +75,10 @@ const config: Config = {
           lineHeight: '1.5rem',
           letterSpacing: '0.0625rem',
         }],
+        '14': ['0.875rem', {
+          lineHeight: '1.5rem',
+          letterSpacing: '0.0625rem',
+        }],
         '12': ['0.75rem', {
           lineHeight: '2.25rem',
           letterSpacing: '0.0625rem',
