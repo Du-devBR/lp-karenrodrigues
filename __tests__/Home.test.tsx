@@ -14,4 +14,10 @@ describe("Home", () => {
     });
     expect(heading).toBeDefined();
   });
+  it("render correct title on section 'servicos'", () => {
+    const heading = screen.getByRole("heading", {
+      name: "Conheça nosso serviços",
+    });
+    expect(heading).toBeDefined();
+  });
 });
