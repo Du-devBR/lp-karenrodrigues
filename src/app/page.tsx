@@ -1,9 +1,17 @@
 import iconSobrancelhas from "@/../public/icon-sobrancelhas.png";
 import iconHydra from "@/../public/icon-hydra.png";
+import Image, { StaticImageData } from "next/legacy/image";
+import Card from "./components/card";
+import { getData } from "./actions";
 
-import Image from "next/legacy/image";
+export interface ServicosItem {
+  image: StaticImageData;
+  name: string;
+  description: string;
+}
 
-export default function Home() {
+export default async function Home() {
+  const data: ServicosItem[] = await getData();
   return (
     <>
       <main id="sobre">
@@ -76,6 +84,11 @@ export default function Home() {
             <h2 className=" text-24 text-gray-800 font-medium max-md:text-18">
               Sobrancelhas Premium
             </h2>
+            <div>
+              {data.map((item, index) => (
+                <Card key={index} data={item} />
+              ))}
+            </div>
           </div>
         </section>
       </main>
