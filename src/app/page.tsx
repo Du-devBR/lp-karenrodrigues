@@ -10,8 +10,19 @@ export interface ServicosItem {
   description: string;
 }
 
+export interface ServicosSection {
+  title: string;
+  card: ServicosItem[];
+}
+
+export interface ServicosData {
+  servicos: [];
+}
+
 export default async function Home() {
-  const data: ServicosItem[] = await getData();
+  const data: ServicosData = await getData();
+  const servicosSection: ServicosSection[] = data.servicos;
+
   return (
     <>
       <main id="sobre">
@@ -80,15 +91,21 @@ export default async function Home() {
           <h1 className="text-32 text-gray-1000 font-bold max-md:text-20">
             Conheça nosso serviços
           </h1>
-          <div className="flex flex-col gap-8 items-center">
-            <h2 className=" text-24 text-gray-800 font-medium max-md:text-18">
-              Sobrancelhas Premium
-            </h2>
-            <div>
-              {data.map((item, index) => (
-                <Card key={index} data={item} />
-              ))}
-            </div>
+          <div>
+            {servicosSection.map((servicos, index) => (
+              <>
+                <div key={index} className="flex flex-col gap-8 items-center">
+                  <h2 className=" text-24 text-gray-800 font-medium max-md:text-18">
+                    {servicos.title}
+                  </h2>
+                  <div className="flex flex-wrap items-center gap-8 justify-center">
+                    {servicos.card.map((item: ServicosItem, index: number) => (
+                      <Card key={index} data={item} />
+                    ))}
+                  </div>
+                </div>
+              </>
+            ))}
           </div>
         </section>
       </main>
