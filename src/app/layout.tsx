@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+
+// import "keen-slider/keen-slider.min.css";
 import Banner from "./components/banner";
 
 const inter = Inter({ subsets: ["latin"] });

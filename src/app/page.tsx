@@ -3,14 +3,21 @@ import iconHydra from "@/../public/icon-hydra.png";
 import Image, { StaticImageData } from "next/legacy/image";
 import Card from "./components/card";
 import { getData } from "./actions";
+import Carousel from "./slides/page";
+
+// import "swiper/css";
+// import "swiper/css/pagination";
+// import "swiper/css/effect-fade";
 
 export interface ServicosItem {
+  id: string;
   image: StaticImageData;
   name: string;
   description: string;
 }
 
 export interface ServicosSection {
+  id: string;
   title: string;
   card: ServicosItem[];
 }
@@ -87,24 +94,23 @@ export default async function Home() {
         </section>
       </main>
       <main id="servicos">
-        <section className="px-16 py-10 flex flex-col gap-10 items-center max-md:px-4 max-md:gap-4">
+        <section className="px-16 py-10 flex flex-col gap-10 max-md:px-4 max-md:gap-4">
           <h1 className="text-32 text-gray-1000 font-bold max-md:text-20">
             Conheça nosso serviços
           </h1>
           <div>
+            <Carousel />
             {servicosSection.map((servicos, index) => (
-              <>
-                <div key={index} className="flex flex-col gap-8 items-center">
-                  <h2 className=" text-24 text-gray-800 font-medium max-md:text-18">
-                    {servicos.title}
-                  </h2>
-                  <div className="flex flex-wrap items-center gap-8 justify-center">
-                    {servicos.card.map((item: ServicosItem, index: number) => (
-                      <Card key={index} data={item} />
-                    ))}
-                  </div>
-                </div>
-              </>
+              <div key={index} className="flex flex-col gap-8 items-center">
+                <h2 className=" text-24 text-gray-800 font-medium max-md:text-18">
+                  {servicos.title}
+                </h2>
+                <Carousel>
+                  {servicos.card.map((item: ServicosItem) => (
+                    <Card key={item.id} data={item} />
+                  ))}
+                </Carousel>
+              </div>
             ))}
           </div>
         </section>

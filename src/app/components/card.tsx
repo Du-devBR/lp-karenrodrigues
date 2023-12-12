@@ -6,10 +6,11 @@ interface CardProps {
 }
 
 export default function Card({ data }: CardProps) {
-  console.log(data);
   return (
-    <div className="max-w-[276px] bg-brand-200 rounded-sm">
-      <Image src={data.image} alt="" />
+    <div className=" w-full  bg-brand-200 rounded-sm ">
+      <div className="w-full h-64  flex flex-col">
+        <Image src={data.image} alt="" height={250} objectFit="cover" />
+      </div>
       <div className="py-6 px-4 flex flex-col gap-3">
         <h3 className="text-20 text-gray-900 font-bold max-md:text-16">
           {data.name}
