@@ -28,7 +28,7 @@ const arrayMenu: MenuItem[] = [
   },
   {
     title: "sobrancelhas",
-    href: "",
+    href: "/#servicos",
   },
   {
     title: "espaço",
