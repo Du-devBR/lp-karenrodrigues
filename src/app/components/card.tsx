@@ -7,15 +7,17 @@ interface CardProps {
 
 export default function Card({ data }: CardProps) {
   return (
-    <div className=" w-full  bg-brand-800 rounded-lg shadow-gray-800 shadow-xl overflow-hidden ">
-      <div className="w-full h-64 flex flex-col">
-        <Image src={data.image} alt="" height={250} objectFit="cover" />
-      </div>
-      <div className="py-6 px-4 flex flex-col gap-3">
-        <h3 className="text-20 text-gray-900 font-bold max-md:text-16">
-          {data.name}
-        </h3>
-        <p className="text-14 text-gray-600 font-light">{data.description}</p>
+    <div className=" w-full h-[505px]  rounded-lg shadow-gray-800 shadow-inner overflow-hidden relative">
+      <Image src={data.image} alt="" objectFit="cover" layout="fill" />
+      <div className="absolute w-full p-4 bottom-0">
+        <div className="flex flex-col gap-3 p-4 bg-gray-200 rounded-lg bg-opacity-25">
+          <h3 className="text-20 text-gray-0 font-bold max-md:text-16 first-letter:uppercase text-inherit">
+            {data.name}
+          </h3>
+          <p className="text-14 text-gray-100 text-inherit font-light">
+            {data.description}
+          </p>
+        </div>
       </div>
     </div>
   );

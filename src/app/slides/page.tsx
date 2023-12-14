@@ -15,19 +15,23 @@ export default function Carousel({ children }: CarouselProps) {
         breakpoints={{
           640: {
             slidesPerView: 1.2,
-            spaceBetween: 20,
+            spaceBetween: 16,
           },
           768: {
             slidesPerView: 2.2,
-            spaceBetween: 40,
+            spaceBetween: 16,
           },
           1024: {
+            slidesPerView: 3.2,
+            spaceBetween: 16,
+          },
+          1444: {
             slidesPerView: 4,
-            spaceBetween: 50,
+            spaceBetween: 16,
           },
         }}
         slidesPerView={1.2}
-        spaceBetween={32}
+        spaceBetween={16}
         className=" mySwiper"
       >
         {children?.map((child, index) => (
