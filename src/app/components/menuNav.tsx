@@ -31,10 +31,6 @@ const arrayMenu: MenuItem[] = [
     href: "",
   },
   {
-    title: "hydraGloss",
-    href: "",
-  },
-  {
     title: "espaço",
     href: "",
   },

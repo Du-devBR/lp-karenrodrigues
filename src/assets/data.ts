@@ -7,7 +7,7 @@ export const arrayServicos = {
   servicos: [
     {
         id: randomUUID(),
-        title: "sobrancelhas premium",
+        title: "sobrancelhas premiummmmm",
         card: [
           {
             id: randomUUID(),
@@ -40,39 +40,5 @@ export const arrayServicos = {
         ]
 
     },
-    {
-        id: randomUUID(),
-        title: "hydragloss premium",
-        card: [
-          {
-            id: randomUUID(),
-            image: imagemLinha,
-            name: "Limpeza basica",
-            description:
-              "Type and scrambled it to make a type specimen book. It has survived not only five centuries.",
-          },
-          {
-            id: randomUUID(),
-            image: imagemLinha,
-            name: "Limpeza basica",
-            description:
-              "Type and scrambled it to make a type specimen book. It has survived not only five centuries.",
-          },
-          {
-            id: randomUUID(),
-            image: imagemLinha,
-            name: "Limpeza basica",
-            description:
-              "Type and scrambled it to make a type specimen book. It has survived not only five centuries.",
-          },
-          {
-            id: randomUUID(),
-            image: imagemLinha,
-            name: "Limpeza basica",
-            description:
-              "Type and scrambled it to make a type specimen book. It has survived not only five centuries.",
-          },
-        ]
-      }
   ]
 }

@@ -1,13 +1,8 @@
 import iconSobrancelhas from "@/../public/icon-sobrancelhas.png";
-import iconHydra from "@/../public/icon-hydra.png";
 import Image, { StaticImageData } from "next/legacy/image";
 import Card from "./components/card";
 import { getData } from "./actions";
 import Carousel from "./slides/page";
-
-// import "swiper/css";
-// import "swiper/css/pagination";
-// import "swiper/css/effect-fade";
 
 export interface ServicosItem {
   id: string;
@@ -60,25 +55,6 @@ export default async function Home() {
               <div className="w-full">
                 <h2 className=" text-24 text-gray-1000 font-bold max-md:text-18">
                   Designer de Sobrancelhas
-                </h2>
-                <p className=" text-16 text-gray-700 font-light mt-2 mb-4 max-md:text-14">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industrys
-                  standard dummy text ever since the
-                </p>
-                <span className=" uppercase text-16 font-medium text-brand-1000">
-                  Veja nossa galeria
-                </span>
-              </div>
-            </div>
-            <div className="flex gap-10 items-center">
-              <Image
-                src={iconHydra}
-                alt="desenho de um hidratante labial na cor da marca."
-              />
-              <div className="w-full">
-                <h2 className=" text-24 text-gray-1000 font-bold max-md:text-18">
-                  Hydra Gloss Lips
                 </h2>
                 <p className=" text-16 text-gray-700 font-light mt-2 mb-4 max-md:text-14">
                   Lorem Ipsum is simply dummy text of the printing and
