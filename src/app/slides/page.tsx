@@ -1,23 +1,24 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import "swiper/css";
-import "swiper/css/pagination";
+import { ReactNode } from "react";
 
-import { Pagination } from "swiper/modules";
+interface CarouselProps {
+  children?: ReactNode[];
+}
 
-export default function Carousel({ children }: any) {
+export default function Carousel({ children }: CarouselProps) {
   return (
     <div className="w-full">
       <Swiper
         breakpoints={{
           640: {
-            slidesPerView: 1,
+            slidesPerView: 1.2,
             spaceBetween: 20,
           },
           768: {
-            slidesPerView: 2,
+            slidesPerView: 2.2,
             spaceBetween: 40,
           },
           1024: {
@@ -25,10 +26,8 @@ export default function Carousel({ children }: any) {
             spaceBetween: 50,
           },
         }}
-        slidesPerView={1}
+        slidesPerView={1.2}
         spaceBetween={32}
-        pagination={{ clickable: true }}
-        modules={[Pagination]}
         className=" mySwiper"
       >
         {children?.map((child, index) => (

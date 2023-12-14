@@ -29,7 +29,7 @@ export default async function Home() {
   return (
     <>
       <main id="sobre">
-        <section className=" px-16 py-16 mb-16 flex items-center gap-16 max-lg:flex-col max-md:px-4 max-md:mb-0">
+        <section className=" px-16 py-16 flex items-center gap-16 max-lg:flex-col max-md:px-4 max-md:mb-0">
           <div className="flex flex-col w-full gap-16 max-md:gap-6">
             <div className="flex flex-col gap-4 max-w-[571px]">
               <h1 className=" text-32 text-gray-1000 font-bold max-md:text-20">
@@ -70,7 +70,7 @@ export default async function Home() {
               </div>
             </div>
           </div>
-          <div className="flex items-center justify-center w-full  max-h-[834px] bg-brand-1000 rounded-[32px] pl-16 pr-4 pb-4 pt-4 ">
+          <div className="flex items-center justify-center w-full  max-h-[834px] bg-brand-800 rounded-[32px] pl-16 pr-4 pb-4 pt-4 ">
             <Image src={imgSobre} alt="Karen Rodrigues" />
           </div>
         </section>
