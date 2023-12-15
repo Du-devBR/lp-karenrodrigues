@@ -8,7 +8,7 @@ interface CarouselProps {
   children?: ReactNode[];
 }
 
-export default function Carousel({ children }: CarouselProps) {
+export default function CarrouselServicos({ children }: CarouselProps) {
   return (
     <div className="w-full">
       <Swiper
