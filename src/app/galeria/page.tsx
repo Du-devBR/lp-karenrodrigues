@@ -1,4 +1,4 @@
-import Carousel from "../slides/page";
+import Carousel from "../slides/servicos";
 
 export default function Galeria() {
   return (

@@ -9,6 +9,7 @@ export default function Banner() {
         src={banner}
         layout="fill"
         objectFit="cover"
+        loading="lazy"
         alt="Banner com 100% da tela, rosto feminino com olhar fixa para cima, olhos castanhos e sobrancelhas definidas."
       />
       <Header />

@@ -1,9 +1,14 @@
 import iconSobrancelhas from "@/../public/icon-sobrancelhas.png";
 import imgSobre from "@/../public/bg-karen.png";
+import imgMaps from "@/../public/maps-karen.png";
+import imgDentro from "@/../public/dentro.png";
+import imgFrente from "@/../public/frente.png";
 import Image, { StaticImageData } from "next/legacy/image";
 import Card from "./components/card";
 import { getData } from "./actions";
-import Carousel from "./slides/page";
+import CarrouselServicos from "./slides/servicos";
+import CarrouselEspaco from "./slides/espaco";
+import { randomUUID } from "crypto";
 
 export interface ServicosItem {
   id: string;
@@ -21,6 +26,38 @@ export interface ServicosSection {
 export interface ServicosData {
   servicos: [];
 }
+
+//
+
+export interface Imagem {
+  id: string;
+  picture: StaticImageData;
+}
+
+interface EspacoSection {
+  id: string;
+  nome: string;
+  imagens: Imagem[];
+}
+
+const arrayEspaco: EspacoSection = {
+  id: randomUUID(),
+  nome: "espaco",
+  imagens: [
+    {
+      id: randomUUID(),
+      picture: imgMaps,
+    },
+    {
+      id: randomUUID(),
+      picture: imgDentro,
+    },
+    {
+      id: randomUUID(),
+      picture: imgFrente,
+    },
+  ],
+};
 
 export default async function Home() {
   const data: ServicosData = await getData();
@@ -81,19 +118,47 @@ export default async function Home() {
             Conheça nossos serviços
           </h1>
           <div>
-            <Carousel />
             {servicosSection.map((servicos, index) => (
               <div key={index} className="flex flex-col gap-8 items-center">
                 <h2 className=" text-24 text-gray-800 font-medium max-md:text-18 capitalize">
                   {servicos.title}
                 </h2>
-                <Carousel>
+                <CarrouselServicos>
                   {servicos.card.map((item: ServicosItem) => (
                     <Card key={item.id} data={item} />
                   ))}
-                </Carousel>
+                </CarrouselServicos>
               </div>
             ))}
+          </div>
+        </section>
+      </main>
+      <main id="espaco">
+        <section className="px-16 py-10 flex flex-col gap-10 max-md:px-4 max-md:gap-4">
+          <h1 className="text-32 text-gray-1000 font-bold max-md:text-20 text-center capitalize">
+            Conheça nosso espaço
+          </h1>
+          <div className="flex w-full justify-between gap-6 max-md:flex-col ">
+            <div className="flex flex-col 2xl:w-2/6 ">
+              <h2 className="text-32 text-gray-1000 font-bold mb-6 max-md:text-18 max-md:mb-4  leading-normal">
+                Bem localizado, receptivo e atraente.
+              </h2>
+              <p className="text-32 text-gray-800 font-medium spece max-md:text-18 leading-normal">
+                Estamos no coração de Brás Cubas em Mogi das Cruzes.
+              </p>
+            </div>
+            <div className="w-full min-h-[372px] rounded-3xl overflow-hidden max-md:min-h-[255px] relative 2xl:w-2/4">
+              <CarrouselEspaco>
+                {arrayEspaco.imagens.map((imagens) => (
+                  <Image
+                    key={imagens.id}
+                    src={imagens.picture}
+                    alt=""
+                    layout="fill"
+                  />
+                ))}
+              </CarrouselEspaco>
+            </div>
           </div>
         </section>
       </main>
