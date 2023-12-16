@@ -9,6 +9,7 @@ import { getData } from "./actions";
 import CarrouselServicos from "./slides/servicos";
 import CarrouselEspaco from "./slides/espaco";
 import { randomUUID } from "crypto";
+import Depoimento from "./components/depoimento";
 
 export interface ServicosItem {
   id: string;
@@ -140,12 +141,16 @@ export default async function Home() {
           </h1>
           <div className="flex w-full justify-between gap-6 max-md:flex-col ">
             <div className="flex flex-col 2xl:w-2/6 ">
-              <h2 className="text-32 text-gray-1000 font-bold mb-6 max-md:text-18 max-md:mb-4  leading-normal">
+              <h2 className="text-32 text-gray-1000 font-bold mb-6 max-md:text-18 max-md:mb-4  leading-normal max-md:text-center">
                 Bem localizado, receptivo e atraente.
               </h2>
-              <p className="text-32 text-gray-800 font-medium spece max-md:text-18 leading-normal">
+              <p className="text-32 text-gray-800 font-medium spece mb-4 max-md:text-18 max-md:mb-2 leading-normal">
                 Estamos no coração de Brás Cubas em Mogi das Cruzes.
               </p>
+              <span className="text-20 text-gray-800 font-medium spece max-md:text-14  leading-normal">
+                Rua Thuller, 467 - Jardim Universo, Mogi das Cruzes - SP,
+                08740-470
+              </span>
             </div>
             <div className="w-full min-h-[372px] rounded-3xl overflow-hidden max-md:min-h-[255px] relative 2xl:w-2/4">
               <CarrouselEspaco>
@@ -160,6 +165,14 @@ export default async function Home() {
               </CarrouselEspaco>
             </div>
           </div>
+        </section>
+      </main>
+      <main id="depoimentos">
+        <section className="max-w-screen-2xl m-auto px-16 py-24 flex flex-col gap-16 max-md:px-4 max-md:py-8 max-md:gap-4">
+          <h1 className="text-32 text-gray-1000 font-bold max-md:text-20 text-center">
+            O que nossos clientes dizem
+          </h1>
+          <Depoimento />
         </section>
       </main>
     </>
