@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 
 // import "keen-slider/keen-slider.min.css";
 import Banner from "./components/banner";
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,7 +22,7 @@ export default function RootLayout({
       <head>
         <title>Karen Rodrigues Sobrancelhas</title>
       </head>
-      <body className={inter.className}>
+      <body className={roboto.className}>
         <Banner />
         {children}
       </body>
