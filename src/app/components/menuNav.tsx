@@ -32,7 +32,7 @@ const arrayMenu: MenuItem[] = [
   },
   {
     title: "espaço",
-    href: "",
+    href: "/#espaco",
   },
 ];
 
