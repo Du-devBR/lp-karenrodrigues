@@ -66,7 +66,7 @@ export default async function Home() {
   return (
     <>
       <main id="sobre">
-        <section className=" max-w-screen-2xl m-auto px-16 py-16 flex items-center gap-16 max-lg:flex-col max-md:px-4 max-md:mb-0 ">
+        <section className=" max-w-screen-2xl m-auto px-16 py-24 flex items-center gap-16 max-lg:flex-col max-md:px-4 max-md:py-8 max-md:mb-0 ">
           <div className="flex flex-col w-full gap-16 max-md:gap-6">
             <div className="flex flex-col gap-4 max-w-[571px]">
               <h1 className=" text-32 text-gray-1000 font-bold max-md:text-20">
@@ -107,17 +107,17 @@ export default async function Home() {
               </div>
             </div>
           </div>
-          <div className="flex items-center justify-center w-full  max-h-[834px] bg-brand-800 rounded-[32px] pl-16 pr-4 pb-4 pt-4 ">
+          <div className="flex items-center justify-center w-full  max-h-[834px] bg-brand-800 rounded-[32px] pl-16 pr-4 pb-4 pt-4  ">
             <Image src={imgSobre} alt="Karen Rodrigues" />
           </div>
         </section>
       </main>
       <main id="servicos">
-        <section className="max-w-screen-2xl m-auto px-16 py-10 flex flex-col gap-10 max-md:px-4 max-md:gap-4">
-          <h1 className="text-32 text-gray-1000 font-bold max-md:text-20 text-center capitalize">
+        <section className="max-w-screen-2xl m-auto px-16 py-24 flex flex-col gap-16 max-md:px-4 max-md:py-8 max-md:gap-4">
+          <h1 className="text-32 text-gray-1000 font-bold max-md:text-20 text-center capitalize ">
             Conheça nossos serviços
           </h1>
-          <div>
+          <div className="">
             {servicosSection.map((servicos, index) => (
               <div key={index} className="flex flex-col gap-8 items-center">
                 <h2 className=" text-24 text-gray-800 font-medium max-md:text-18 capitalize">
@@ -134,8 +134,8 @@ export default async function Home() {
         </section>
       </main>
       <main id="espaco">
-        <section className="max-w-screen-2xl m-auto px-16 py-10 flex flex-col gap-10 max-md:px-4 max-md:gap-4">
-          <h1 className="text-32 text-gray-1000 font-bold max-md:text-20 text-center capitalize">
+        <section className="max-w-screen-2xl m-auto px-16 py-24 flex flex-col gap-16 max-md:px-4 max-md:py-8 max-md:gap-4">
+          <h1 className="text-32 text-gray-1000 font-bold max-md:text-20 text-center capitalize ">
             Conheça nosso espaço
           </h1>
           <div className="flex w-full justify-between gap-6 max-md:flex-col ">
