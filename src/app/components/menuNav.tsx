@@ -40,8 +40,8 @@ export default function MenuNav({ onHamburguer, onClosedHamburguer }: Props) {
   const [active, setActive] = useState("");
   return (
     <nav
-      className={`flex max-md:flex-col gap-4 max-md:px-4 max-md:mt-24 ${
-        onHamburguer ? "visible" : ""
+      className={`flex max-md:flex-col gap-4 max-md:px-4  ${
+        onHamburguer ? "visible max-md:mt-24" : ""
       }`}
     >
       {arrayMenu.map((item: MenuItem, index) => (

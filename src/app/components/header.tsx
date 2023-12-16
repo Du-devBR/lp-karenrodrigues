@@ -9,7 +9,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="h-24 relative flex flex-wrap justify-between items-center z-20 md:px-16 max-md:px-4">
+      <header className="h-24 max-w-screen-2xl m-auto relative flex flex-wrap justify-between items-center z-20 md:px-16 max-md:px-4">
         <Image src={logo} alt={"Letra K e R em formato de laço na cor rosa."} />
         <div className=" flex items-center justify-end gap-4 max-md:hidden">
           <MenuNav />

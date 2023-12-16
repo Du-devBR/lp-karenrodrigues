@@ -4,7 +4,7 @@ import Header from "./header";
 
 export default function Banner() {
   return (
-    <div className="w-full min-h-screen relative">
+    <div className="w-full relative">
       <Image
         src={banner}
         layout="fill"
@@ -13,7 +13,7 @@ export default function Banner() {
         alt="Banner com 100% da tela, rosto feminino com olhar fixa para cima, olhos castanhos e sobrancelhas definidas."
       />
       <Header />
-      <div className=" max-md:px-4 absolute top-28 p-16 w-full min-h-[calc(100vh_-_112px)] justify-center flex flex-col gap-4">
+      <div className="flex flex-col gap-4 max-w-screen-2xl m-auto relative p-16  min-h-[calc(100vh_-_90px)] max-md:px-4  justify-center">
         <span className="max-md:text-banner_sm md:text-32 text-gray-100 font-bold">
           Designer
         </span>

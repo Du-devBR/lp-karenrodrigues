@@ -66,7 +66,7 @@ export default async function Home() {
   return (
     <>
       <main id="sobre">
-        <section className=" px-16 py-16 flex items-center gap-16 max-lg:flex-col max-md:px-4 max-md:mb-0 ">
+        <section className=" max-w-screen-2xl m-auto px-16 py-16 flex items-center gap-16 max-lg:flex-col max-md:px-4 max-md:mb-0 ">
           <div className="flex flex-col w-full gap-16 max-md:gap-6">
             <div className="flex flex-col gap-4 max-w-[571px]">
               <h1 className=" text-32 text-gray-1000 font-bold max-md:text-20">
@@ -113,7 +113,7 @@ export default async function Home() {
         </section>
       </main>
       <main id="servicos">
-        <section className="px-16 py-10 flex flex-col gap-10 max-md:px-4 max-md:gap-4">
+        <section className="max-w-screen-2xl m-auto px-16 py-10 flex flex-col gap-10 max-md:px-4 max-md:gap-4">
           <h1 className="text-32 text-gray-1000 font-bold max-md:text-20 text-center capitalize">
             Conheça nossos serviços
           </h1>
@@ -134,7 +134,7 @@ export default async function Home() {
         </section>
       </main>
       <main id="espaco">
-        <section className="px-16 py-10 flex flex-col gap-10 max-md:px-4 max-md:gap-4">
+        <section className="max-w-screen-2xl m-auto px-16 py-10 flex flex-col gap-10 max-md:px-4 max-md:gap-4">
           <h1 className="text-32 text-gray-1000 font-bold max-md:text-20 text-center capitalize">
             Conheça nosso espaço
           </h1>
