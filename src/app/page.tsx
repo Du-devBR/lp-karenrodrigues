@@ -5,11 +5,14 @@ import imgDentro from "@/../public/dentro.png";
 import imgFrente from "@/../public/frente.png";
 import Image, { StaticImageData } from "next/legacy/image";
 import Card from "./components/card";
-import { getData } from "./actions";
+import { getDataDepoimentos, getDataServicos } from "./actions";
 import CarrouselServicos from "./slides/servicos";
 import CarrouselEspaco from "./slides/espaco";
 import { randomUUID } from "crypto";
-import Depoimento from "./components/depoimento";
+import Depoimento from "./components/cardDepoimento";
+import CarrouselDepoimentos from "./slides/depoimentos";
+import CardDepoimento from "./components/cardDepoimento";
+import { arrayDepoimentos } from "@/assets/data";
 
 export interface ServicosItem {
   id: string;
@@ -60,9 +63,17 @@ const arrayEspaco: EspacoSection = {
   ],
 };
 
+export interface DepoimentoItem {
+  id: string;
+  image: string;
+  descricao: string;
+  nome: string;
+}
+
 export default async function Home() {
-  const data: ServicosData = await getData();
-  const servicosSection: ServicosSection[] = data.servicos;
+  const dataServicos: ServicosData = await getDataServicos();
+  const dataDepoimentos = await getDataDepoimentos();
+  const servicosSection: ServicosSection[] = dataServicos.servicos;
 
   return (
     <>
@@ -172,7 +183,19 @@ export default async function Home() {
           <h1 className="text-32 text-gray-1000 font-bold max-md:text-20 text-center">
             O que nossos clientes dizem
           </h1>
-          <Depoimento />
+          <cite className=" text-center text-14 text-gray-800">
+            Nossos corações se aquecem com o amor dos nossos clientes; nossa
+            maior satisfação reside em transformar vidas, demonstrando que todos
+            nós somos verdadeiramente maravilhosos.Nossos corações se aquecem
+            com o amor dos nossos clientes; nossa maior satisfação reside em
+            transformar vidas, demonstrando que todos nós somos verdadeiramente
+            maravilhosos.
+          </cite>
+          <CarrouselDepoimentos>
+            {dataDepoimentos.map((depoimento: DepoimentoItem) => (
+              <CardDepoimento key={depoimento.id} data={depoimento} />
+            ))}
+          </CarrouselDepoimentos>
         </section>
       </main>
     </>
