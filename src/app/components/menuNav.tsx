@@ -34,6 +34,10 @@ const arrayMenu: MenuItem[] = [
     title: "espaço",
     href: "/#espaco",
   },
+  {
+    title: "depoimentos",
+    href: "/#depoimentos",
+  },
 ];
 
 export default function MenuNav({ onHamburguer, onClosedHamburguer }: Props) {
