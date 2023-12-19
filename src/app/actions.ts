@@ -1,7 +1,5 @@
-import getConfig from "next/config";
 
-const {publicRuntimeConfig } = getConfig()
-const API_URL = publicRuntimeConfig.API_URL
+const API_URL = process.env.BASE_URL
 
 export async function getDataServicos() {
   const revalidarDadosACada24Horas = 5

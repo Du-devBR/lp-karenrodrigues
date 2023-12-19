@@ -13,6 +13,7 @@ import Depoimento from "./components/cardDepoimento";
 import CarrouselDepoimentos from "./slides/depoimentos";
 import CardDepoimento from "./components/cardDepoimento";
 import { arrayDepoimentos } from "@/assets/data";
+import getConfig from "next/config";
 
 export interface ServicosItem {
   id: string;
