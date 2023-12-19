@@ -11,8 +11,8 @@ const config: Config = {
       colors: {
         black: '#000',
         white: '#fff',
-        green: '#5CEE6D',
-        purple: '#CD5CE1',
+        whatsapp: '#5CEE6D',
+        instagram: '#CD5CE1',
         brand: {
           100: "#FFF8F6",
           200: "#FFF1EE",
@@ -86,6 +86,11 @@ const config: Config = {
           lineHeight: '0.75rem',
           letterSpacing: '0.0625rem',
         }],
+        'BUTTON-C0NTACT': ['0.875rem', {
+          lineHeight: '0.75rem',
+          letterSpacing: '0.094rem',
+          fontWeight: 'bold',
+        }]
       },
       borderRadius: {
         'none': '0',
