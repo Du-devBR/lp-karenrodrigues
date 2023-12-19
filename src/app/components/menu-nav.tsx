@@ -1,44 +1,13 @@
 "use client";
 
+import { MenuItem, arrayMenu } from "@/assets/menu-data";
 import Link from "next/link";
 import { useState } from "react";
-
-interface MenuItem {
-  title: string;
-  href: string;
-}
 
 interface Props {
   onHamburguer?: boolean;
   onClosedHamburguer?: () => void;
 }
-
-const arrayMenu: MenuItem[] = [
-  {
-    title: "inicio",
-    href: "/",
-  },
-  {
-    title: "sobre",
-    href: "/#sobre",
-  },
-  {
-    title: "galeria",
-    href: "/galeria",
-  },
-  {
-    title: "sobrancelhas",
-    href: "/#servicos",
-  },
-  {
-    title: "espaço",
-    href: "/#espaco",
-  },
-  {
-    title: "depoimentos",
-    href: "/#depoimentos",
-  },
-];
 
 export default function MenuNav({ onHamburguer, onClosedHamburguer }: Props) {
   const [active, setActive] = useState("");

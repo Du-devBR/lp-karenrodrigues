@@ -4,6 +4,7 @@ import "./globals.css";
 
 // import "keen-slider/keen-slider.min.css";
 import Banner from "./components/banner";
+import Footer from "./components/footer";
 
 const roboto = Roboto({ subsets: ["latin"], weight: "400" });
 
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body className={roboto.className}>
         <Banner />
         {children}
+        <Footer />
       </body>
     </html>
   );

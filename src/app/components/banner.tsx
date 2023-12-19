@@ -4,7 +4,7 @@ import Header from "./header";
 
 export default function Banner() {
   return (
-    <div className="w-full relative">
+    <div id="inicio" className="w-full relative">
       <Image
         src={banner}
         layout="fill"
