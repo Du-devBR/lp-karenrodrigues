@@ -2,7 +2,7 @@
 import Image from "next/image";
 import logo from "@/../public/logotipo.png";
 import { useState } from "react";
-import MenuNav from "./menuNav";
+import MenuNav from "./menu-nav";
 
 export default function Header() {
   const [hambuguer, setHamburguer] = useState(false);

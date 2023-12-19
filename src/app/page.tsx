@@ -9,11 +9,10 @@ import { getDataDepoimentos, getDataServicos } from "./actions";
 import CarrouselServicos from "./slides/servicos";
 import CarrouselEspaco from "./slides/espaco";
 import { randomUUID } from "crypto";
-import Depoimento from "./components/cardDepoimento";
+import Depoimento from "./components/card-depoimento";
 import CarrouselDepoimentos from "./slides/depoimentos";
-import CardDepoimento from "./components/cardDepoimento";
-import { arrayDepoimentos } from "@/assets/data";
-import getConfig from "next/config";
+import CardDepoimento from "./components/card-depoimento";
+import { ButtonContact } from "./components/button-contact";
 
 export interface ServicosItem {
   id: string;
@@ -70,6 +69,28 @@ export interface DepoimentoItem {
   descricao: string;
   nome: string;
 }
+
+export interface ButtonContactInterface {
+  id: string;
+  text: string;
+  color: string;
+  href: string;
+}
+
+const arrayContacts: ButtonContactInterface[] = [
+  {
+    id: randomUUID(),
+    text: "whatsapp",
+    color: "whatsapp",
+    href: `https://wa.me/${process.env.PHONE_NUMBER || ""}`,
+  },
+  {
+    id: randomUUID(),
+    text: "instagram",
+    color: "instagram",
+    href: `https://www.instagram.com/${process.env.INSTAGRAM_PROFILE || ""}`,
+  },
+];
 
 export default async function Home() {
   const dataServicos: ServicosData = await getDataServicos();
@@ -197,6 +218,22 @@ export default async function Home() {
               <CardDepoimento key={depoimento.id} data={depoimento} />
             ))}
           </CarrouselDepoimentos>
+        </section>
+      </main>
+      <main id="contato">
+        <section className="max-w-screen-2xl m-auto px-16 py-24 flex flex-col gap-16 max-md:px-4 max-md:py-8 max-md:gap-4 bg-brand-200">
+          <h1 className="text-32 text-gray-1000 font-bold max-md:text-20 text-center">
+            Entre em contato
+          </h1>
+          <p className="text-center text-16 text-gray-700 font-medium">
+            Agende agora mesmo pelo nosso whatsapp e acesse nosso instragram
+            para conhecer um pouco mais do nosso trabalho.
+          </p>
+          <div className="flex items-center justify-center gap-8 max-md:gap-4">
+            {arrayContacts.map((contact) => (
+              <ButtonContact key={contact.id} data={contact} />
+            ))}
+          </div>
         </section>
       </main>
     </>
