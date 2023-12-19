@@ -10,59 +10,85 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <section className="bg-gray-900 w-full h-full">
-      <div className="max-w-screen-2xl m-auto p-16 flex flex-col max-md:px-4">
-        <div className="max-md:w-[60px] max-md:self-center">
+      <div className="max-w-screen-2xl m-auto pt-16  px-16 flex flex-col max-md:px-4 max-md:pt-10">
+        <div className=" max-md:self-center">
           <Image src={logo} alt="" />
         </div>
-        <div className=" flex justify-between gap-8 flex-wrap-reverse ">
+        <div className=" flex justify-between gap-8 flex-wrap-reverse mt-8 max-md:mt-4 max-md:gap-4">
           <div className="flex flex-col">
-            <h2 className="text-20 text-gray-100 font-bold">Mapa do site</h2>
+            <h2 className="text-20 text-gray-100 font-bold mb-4 max-md:text-14">
+              Mapa do site
+            </h2>
             {arrayMenu.map((item, index) => (
-              <Link key={index} href={item.href}>
+              <Link
+                key={index}
+                href={item.href}
+                className="text-16 text-gray-300 font-light mb-2 capitalize"
+              >
                 {item.title}
               </Link>
             ))}
           </div>
           <div className="flex flex-col">
-            <h2 className="text-20 text-gray-100 font-bold">Contato</h2>
-            <span>email@gmail.com</span>
-            <span>11 123456789</span>
-          </div>
-          <div className="flex flex-col">
-            <h2 className="text-20 text-gray-100 font-bold">Localização</h2>
-            <span>Rua Lorem, 1 Mogi das Cruzes - SP</span>
-          </div>
-          <div className="flex flex-col">
-            <h2 className="text-20 text-gray-100 font-bold">
-              Siga nossas redes sociais
-              <div className="flex gap-10 items-center justify-between w-full">
-                <a href="http://">
-                  <Image
-                    src={iconInstagram}
-                    alt="logotipo instagram simboliando uma camera fotografica."
-                    width={60}
-                    height={60}
-                  />
-                </a>
-                <a href="http://">
-                  <Image
-                    src={iconWhatsapp}
-                    alt="logotipo whatsapp circulo na cor verde e icone de telegone ao centro do circulo"
-                    width={60}
-                    height={60}
-                  />
-                </a>
-                <a href="http://">
-                  <Image
-                    src={iconFacebook}
-                    alt="logotipo facebook circulo azul com a letra F ao centro do circulo"
-                    width={60}
-                    height={60}
-                  />
-                </a>
-              </div>
+            <h2 className="text-20 text-gray-100 font-bold mb-4 max-md:text-14">
+              Contato
             </h2>
+            <span className="text-16 text-gray-300 font-light mb-2 capitalize">
+              email@gmail.com
+            </span>
+            <span className="text-16 text-gray-300 font-light mb-2 capitalize">
+              11 123456789
+            </span>
           </div>
+          <div className="flex flex-col">
+            <h2 className="text-20 text-gray-100 font-bold mb-4 max-md:text-14">
+              Localização
+            </h2>
+            <span className="text-16 text-gray-300 font-light mb-2 capitalize">
+              Rua Lorem, 1 Mogi das Cruzes - SP
+            </span>
+          </div>
+          <div className="flex flex-col max-md:m-auto">
+            <h2 className="text-20 text-gray-100 font-bold mb-4 max-md:text-14">
+              Siga nossas redes sociais
+            </h2>
+            <div className="flex gap-10 items-center justify-between max-md:gap-4 ">
+              <a href="http://">
+                <Image
+                  src={iconInstagram}
+                  alt="logotipo instagram simboliando uma camera fotografica."
+                  width={60}
+                  height={60}
+                />
+              </a>
+              <a href="http://">
+                <Image
+                  src={iconWhatsapp}
+                  alt="logotipo whatsapp circulo na cor verde e icone de telegone ao centro do circulo"
+                  width={60}
+                  height={60}
+                />
+              </a>
+              <a href="http://">
+                <Image
+                  src={iconFacebook}
+                  alt="logotipo facebook circulo azul com a letra F ao centro do circulo"
+                  width={60}
+                  height={60}
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="w-[40px] h-[40px] bg-brand-800 self-end my-4 rounded-sm items-center justify-center flex">
+          <div className="h-[20px] w-1 bg-gray-800 rotate-[30deg]"></div>
+          <div className="h-[20px] w-1 bg-gray-800 rotate-[-30deg]"></div>
+        </div>
+        <div className="py-3 text-center border-t-2 border-gray-100 ">
+          <span className="text-14 text-gray-100 font-light max-md:text-10">
+            Karen Rodrigues 2024 - Todos os direitos reservados | Criado e
+            desenvolvido por Eduardo Ananias
+          </span>
         </div>
       </div>
     </section>
