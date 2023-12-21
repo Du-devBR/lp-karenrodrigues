@@ -39,7 +39,7 @@ export default function Header() {
         className={`${
           hambuguer
             ? " absolute w-full min-h-screen top-0 bg-gray-800 duration-700 visible z-10 "
-            : " w-0 h-0"
+            : " w-0 h-0 opacity-0 duration-500 "
         }`}
       >
         <MenuNav

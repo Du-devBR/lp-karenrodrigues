@@ -1,7 +1,7 @@
 import Image from "next/legacy/image";
 
 import logo from "@/../public/logotipo.png";
-import iconInstagram from "@/../public/intagram.svg";
+import iconInstagram from "@/../public/instagram.svg";
 import iconWhatsapp from "@/../public/whatsapp.svg";
 import iconFacebook from "@/../public/facebook.svg";
 import { arrayMenu } from "@/assets/menu-data";
@@ -23,7 +23,7 @@ export default function Footer() {
               <Link
                 key={index}
                 href={item.href}
-                className="text-16 text-gray-300 font-light mb-2 capitalize"
+                className="text-16 text-gray-300 font-light mb-2 capitalize hover:text-brand-800 duration-500"
               >
                 {item.title}
               </Link>
@@ -52,38 +52,41 @@ export default function Footer() {
             <h2 className="text-20 text-gray-100 font-bold mb-4 max-md:text-14">
               Siga nossas redes sociais
             </h2>
-            <div className="flex gap-10 items-center justify-between max-md:gap-4 ">
+            <div className="flex items-center justify-between max-md:gap-4 ">
               <a href="http://">
                 <Image
                   src={iconInstagram}
                   alt="logotipo instagram simboliando uma camera fotografica."
-                  width={60}
-                  height={60}
+                  width={40}
+                  height={40}
                 />
               </a>
               <a href="http://">
                 <Image
                   src={iconWhatsapp}
                   alt="logotipo whatsapp circulo na cor verde e icone de telegone ao centro do circulo"
-                  width={60}
-                  height={60}
+                  width={40}
+                  height={40}
                 />
               </a>
               <a href="http://">
                 <Image
                   src={iconFacebook}
                   alt="logotipo facebook circulo azul com a letra F ao centro do circulo"
-                  width={60}
-                  height={60}
+                  width={40}
+                  height={40}
                 />
               </a>
             </div>
           </div>
         </div>
-        <div className="w-[40px] h-[40px] bg-brand-800 self-end my-4 rounded-sm items-center justify-center flex">
-          <div className="h-[20px] w-1 bg-gray-800 rotate-[30deg]"></div>
-          <div className="h-[20px] w-1 bg-gray-800 rotate-[-30deg]"></div>
-        </div>
+        <Link
+          href={"/#inicio"}
+          className="w-[40px] h-[40px] bg-brand-800 self-end my-4 rounded-sm items-center justify-center flex duration-500 cursor-pointer hover:bg-brand-1000 hover:animate-pulse"
+        >
+          <span className="h-[20px] w-1 bg-gray-800 rotate-[30deg] m-[2px] rounded-sm"></span>
+          <span className="h-[20px] w-1 bg-gray-800 rotate-[-30deg] m-[2px] rounded-sm"></span>
+        </Link>
         <div className="py-3 text-center border-t-2 border-gray-100 ">
           <span className="text-14 text-gray-100 font-light max-md:text-10">
             Karen Rodrigues 2024 - Todos os direitos reservados | Criado e

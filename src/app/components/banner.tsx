@@ -4,14 +4,16 @@ import Header from "./header";
 
 export default function Banner() {
   return (
-    <div id="inicio" className="w-full relative">
-      <Image
-        src={banner}
-        layout="fill"
-        objectFit="cover"
-        loading="lazy"
-        alt="Banner com 100% da tela, rosto feminino com olhar fixa para cima, olhos castanhos e sobrancelhas definidas."
-      />
+    <div id="inicio" className="w-full relative ">
+      <div className="">
+        <Image
+          src={banner}
+          layout="fill"
+          objectFit="cover"
+          loading="lazy"
+          alt="Banner com 100% da tela, rosto feminino com olhar fixa para cima, olhos castanhos e sobrancelhas definidas."
+        />
+      </div>
       <Header />
       <div className="flex flex-col gap-4 max-w-screen-2xl m-auto relative p-16  min-h-[calc(100vh_-_90px)] max-md:px-4  justify-center">
         <span className="max-md:text-banner_sm md:text-32 text-gray-100 font-bold">
