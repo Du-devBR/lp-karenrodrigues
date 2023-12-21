@@ -3,8 +3,8 @@ import { Roboto } from "next/font/google";
 import "./globals.css";
 
 // import "keen-slider/keen-slider.min.css";
-import Banner from "./components/banner";
-import Footer from "./components/footer";
+import Banner from "../components/banner";
+import Footer from "../components/footer";
 
 const roboto = Roboto({ subsets: ["latin"], weight: "400" });
 
