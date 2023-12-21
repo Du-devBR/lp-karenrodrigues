@@ -3,6 +3,8 @@
 import { MenuItem, menuNavList } from "@/assets/database/menu-data";
 import Link from "next/link";
 import { useState } from "react";
+import ButtonCta from "./ui/button-cta";
+import { listButtonCta } from "@/assets/database/button-cta-data";
 
 interface Props {
   onHamburguer?: boolean;
@@ -13,8 +15,8 @@ export default function MenuNav({ onHamburguer, onClosedHamburguer }: Props) {
   const [active, setActive] = useState("");
   return (
     <nav
-      className={`flex max-md:flex-col gap-4 max-md:px-4  ${
-        onHamburguer ? "visible max-md:mt-24" : ""
+      className={`flex max-md:flex-col gap-4 max-md:px-4 items-center ${
+        onHamburguer ? "visible max-md:mt-24 " : ""
       }`}
     >
       {menuNavList.map((item: MenuItem, index) => (
@@ -34,6 +36,7 @@ export default function MenuNav({ onHamburguer, onClosedHamburguer }: Props) {
           {item.title}
         </Link>
       ))}
+      <ButtonCta data={listButtonCta.contact} />
     </nav>
   );
 }

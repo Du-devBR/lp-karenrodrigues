@@ -28,4 +28,8 @@ export const menuNavList: MenuItem[] = [
     title: "depoimentos",
     href: "/#comments",
   },
+  {
+    title: "conato",
+    href: "/#contact",
+  },
 ];

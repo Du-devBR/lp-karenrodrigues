@@ -1,6 +1,8 @@
 import Image from "next/legacy/image";
 import banner from "../../public/banner.svg";
 import Header from "./header";
+import ButtonCta from "./ui/button-cta";
+import { listButtonCta } from "@/assets/database/button-cta-data";
 
 export default function Banner() {
   return (
@@ -15,7 +17,7 @@ export default function Banner() {
         />
       </div>
       <Header />
-      <div className="flex flex-col gap-4 max-w-screen-2xl m-auto relative p-16  min-h-[calc(100vh_-_90px)] max-md:px-4  justify-center">
+      <div className="flex flex-col gap-4 max-w-screen-2xl m-auto relative p-16  min-h-[calc(100vh_-_90px)] max-md:px-4  justify-center items-start">
         <span className="max-md:text-banner_sm md:text-32 text-gray-100 font-bold">
           Designer
         </span>
@@ -25,6 +27,7 @@ export default function Banner() {
         <p className="max-md:text-16 md:text-32 text-gray-100 font-bold">
           Toda a técnica de Karen Rodrigues
         </p>
+        <ButtonCta data={listButtonCta.services} />
       </div>
     </div>
   );
