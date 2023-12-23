@@ -17,19 +17,23 @@ export default function Banner() {
         />
       </div>
       <Header />
-
       <div className="flex flex-col max-w-screen-2xl  m-auto relative p-16  min-h-[calc(100vh_-_90px)] max-md:px-4  justify-center items-start ">
-        <div className="flex flex-col gap-4 justify-center items-start max-md:gap-2 relative rounded-md  ">
+        <div className="max-w-[600px] flex flex-col gap-4 justify-center items-start max-md:gap-2 relative rounded-md  ">
           <span className="max-md:text-20 md:text-32 text-gray-100 font-bold ">
             Designer
           </span>
-          <h1 className="max-md:text-banner_md md:text-banner_lg font-bold uppercase text-brand-1000 ">
+          <h1 className="max-md:text-40 text-banner_lg font-bold uppercase text-brand-1000 ">
             Sobrancelhas
           </h1>
-          <p className="max-md:text-16 md:text-20 text-gray-100 mb-4 ">
-            Toda a técnica de Karen Rodrigues
+          <p className="max-md:text-14 text-16 text-gray-100 mb-4 ">
+            Obtenha o formato de sobrancelha perfeito e realce sua beleza
+            natural com nosso designer de sobrancelhas profissional. Marque uma
+            consulta hoje!
           </p>
-          <ButtonCta data={listButtonCta.services} />
+          <div className="flex gap-4">
+            <ButtonCta data={listButtonCta.services} styleColor={"secundary"} />
+            <ButtonCta data={listButtonCta.schedule} />
+          </div>
         </div>
       </div>
     </div>
