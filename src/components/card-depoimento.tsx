@@ -14,7 +14,7 @@ export default function CardDepoimento({ data }: CardCommentProps) {
         {data.description}
       </p>
 
-      <strong className="text-20 text-brand-1000 font-medium mt-auto max-md:text-16">
+      <strong className="text-20 text-gray-1000 font-medium mt-auto max-md:text-16">
         {data.name}
       </strong>
     </div>

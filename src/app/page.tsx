@@ -43,24 +43,23 @@ export default async function Home() {
             </defs>
           </svg> */}
           <div className="flex flex-col w-full gap-16 max-md:gap-6 ">
-            <div className="flex flex-col gap-4 max-w-[571px] ">
-              <h1 className=" text-32 text-gray-1000 font-bold max-md:text-20">
-                Designer Karen Rodrigues
+            <div className="flex flex-col gap-6 max-w-[571px] max-md:text-center ">
+              <h1 className=" text-40 text-gray-900 font-bold max-md:text-32">
+                Karen Rodrigues especialista em Sobrancelhas
               </h1>
-              <p className=" text-16 font-light text-gray-700 max-md:text-14">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industrys standard dummy text
-                ever since the 1500s, when an unknown printer took a galley of
-                type and scrambled it to make a type specimen book. It has
-                survived not only five centuries Lorem Ipsum is simply dummy
-                text of the printing and typesetting industry. Lorem Ipsum has
-                been the industrys standard dummy text ever since the 1500s,
-                when an unknown printer took a galley of type and scrambled it
-                to make a type specimen book. It has survived not only five
-                centuries
+              <cite className="text-24 text-gray-500 font-light max-md:text-20">
+                “ Amo testemunhar o sorriso iluminar o rosto das pessoas depois
+                que concluo o design de sobrancelhas, sabendo que pude realçar
+                sua beleza e confiança. ”
+              </cite>
+              <p className=" text-16 font-light text-gray-800 ">
+                Com anos de experiência e paixão por realçar a beleza natural,
+                eu, como designer de sobrancelhas, adoto uma abordagem
+                personalizada para criar sobrancelhas deslumbrantes que
+                complementam perfeitamente suas características únicas.
               </p>
             </div>
-            <div className="flex flex-col w-full gap-6 max-w-[571px]">
+            {/* <div className="flex flex-col w-full gap-6 max-w-[571px]">
               <div className="flex gap-10 items-center">
                 <Image
                   src={iconSobrancelhas}
@@ -75,12 +74,12 @@ export default async function Home() {
                     typesetting industry. Lorem Ipsum has been the industrys
                     standard dummy text ever since the
                   </p>
-                  <span className=" uppercase text-16 font-medium text-brand-1000">
+                  <span className=" uppercase text-16 font-medium text-gray-1000">
                     Veja nossa galeria
                   </span>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
           <div className="flex items-center justify-center w-full  max-h-[834px] bg-brand-800 rounded-[32px] pl-16 pr-4 pb-4 pt-4  ">
             <Image src={imgSobre} alt="Karen Rodrigues" />
