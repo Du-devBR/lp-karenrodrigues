@@ -56,7 +56,7 @@ export default function Footer() {
               Siga nossas redes sociais
             </h2>
             <div className="flex items-center justify-between max-md:gap-4 ">
-              <a href="http://">
+              <a href="http://https://www.google.com.br/">
                 <Image
                   src={iconInstagram}
                   alt="logotipo instagram simboliando uma camera fotografica."
@@ -64,7 +64,7 @@ export default function Footer() {
                   height={40}
                 />
               </a>
-              <a href="http://">
+              <a href="http://https://www.google.com.br/">
                 <Image
                   src={iconWhatsapp}
                   alt="logotipo whatsapp circulo na cor verde e icone de telegone ao centro do circulo"
@@ -72,7 +72,7 @@ export default function Footer() {
                   height={40}
                 />
               </a>
-              <a href="http://">
+              <a href="http://https://www.google.com.br/">
                 <Image
                   src={iconFacebook}
                   alt="logotipo facebook circulo azul com a letra F ao centro do circulo"
@@ -85,6 +85,8 @@ export default function Footer() {
         </div>
         <Link
           href={"/#inicio"}
+          role="link"
+          aria-label="voltar ao inicio"
           className="w-[40px] h-[40px] bg-brand-800 self-end my-4 rounded-sm items-center justify-center flex duration-500 cursor-pointer hover:bg-brand-1000 hover:animate-pulse"
         >
           <span className="h-[20px] w-1 bg-gray-800 rotate-[30deg] m-[2px] rounded-sm"></span>
