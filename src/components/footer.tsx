@@ -6,6 +6,8 @@ import iconWhatsapp from "@/../public/whatsapp.svg";
 import iconFacebook from "@/../public/facebook.svg";
 import { menuNavList } from "@/assets/database/menu-data";
 import Link from "next/link";
+import ButtonCta from "./ui/button-cta";
+import { listButtonCta } from "@/assets/database/button-cta-data";
 
 export default function Footer() {
   return (
@@ -40,13 +42,14 @@ export default function Footer() {
               11 123456789
             </span>
           </div>
-          <div className="flex flex-col">
+          <div className="flex flex-col items-start">
             <h2 className="text-20 text-gray-100 font-bold mb-4 max-md:text-14">
               Localização
             </h2>
             <span className="text-16 text-gray-300 font-light mb-2 capitalize">
               Rua Lorem, 1 Mogi das Cruzes - SP
             </span>
+            <ButtonCta data={listButtonCta.location} />
           </div>
           <div className="flex flex-col max-md:m-auto">
             <h2 className="text-20 text-gray-100 font-bold mb-4 max-md:text-14">
