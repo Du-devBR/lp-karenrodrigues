@@ -6,16 +6,16 @@ import { randomUUID } from "crypto";
 
 export const listServices = {
   services: [
-    {
-        id: randomUUID(),
-        title: "sobrancelhas premium",
-        card: [
+    // {
+    //     id: randomUUID(),
+    //     title: "sobrancelhas premium",
+    //     card: [
           {
             id: randomUUID(),
             image: imagemLinha,
             name: "micropigmentação técnica shadow",
             description:
-              "Type and scrambled it to make a type specimen book. It has survived not only five centuries.",
+              "Achieve the perfect eyebrow shape with our professional shaping services. Our experienced eyebrow designers will assess your facial features and create a customized shape that enhances your natural beauty.",
           },
           {
             id: randomUUID(),
@@ -40,6 +40,6 @@ export const listServices = {
           },
         ]
 
-    },
-  ]
+    // },
+  // ]
 }

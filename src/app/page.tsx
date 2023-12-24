@@ -3,7 +3,6 @@ import imgSobre from "@/../public/bg-karen.png";
 import Image from "next/legacy/image";
 import CardDepoimento from "../components/card-depoimento";
 import { ButtonContact } from "../components/ui/button-contact";
-import CardService from "../components/card-services";
 import CarrouselServices from "@/components/slides/carrousel-service";
 import CarrouselLocation from "@/components/slides/carrousel-location";
 import CarrouselComments from "@/components/slides/carrousel-comment";
@@ -13,11 +12,13 @@ import { getDataServices } from "./util/getDataservicesApi";
 import { getDataComments } from "./util/getDataCommentsApi";
 import ButtonCta from "@/components/ui/button-cta";
 import { listButtonCta } from "@/assets/database/button-cta-data";
+import CardSlideService from "../components/card-slide-services";
+import CardService from "@/components/card-service";
 
 export default async function Home() {
   const dataServices: ServiceData = await getDataServices();
   const dataComments = await getDataComments();
-  const servicesSection: ServiceSection[] = dataServices.services;
+  const servicesSection: ServiceItem[] = dataServices.services;
 
   return (
     <>
@@ -59,27 +60,6 @@ export default async function Home() {
                 complementam perfeitamente suas características únicas.
               </p>
             </div>
-            {/* <div className="flex flex-col w-full gap-6 max-w-[571px]">
-              <div className="flex gap-10 items-center">
-                <Image
-                  src={iconSobrancelhas}
-                  alt="desenho sobrancelha e uma pinça na cores da marca."
-                />
-                <div className="w-full">
-                  <h2 className=" text-24 text-gray-1000 font-bold max-md:text-18">
-                    Designer de Sobrancelhas
-                  </h2>
-                  <p className=" text-16 text-gray-700 font-light mt-2 mb-4 max-md:text-14">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industrys
-                    standard dummy text ever since the
-                  </p>
-                  <span className=" uppercase text-16 font-medium text-gray-1000">
-                    Veja nossa galeria
-                  </span>
-                </div>
-              </div>
-            </div> */}
           </div>
           <div className="flex items-center justify-center w-full  max-h-[834px] bg-brand-800 rounded-[32px] pl-16 pr-4 pb-4 pt-4  ">
             <Image src={imgSobre} alt="Karen Rodrigues" />
@@ -87,24 +67,17 @@ export default async function Home() {
         </section>
       </main>
       <main id="services" className="bg-gray-0">
-        <section className="max-w-screen-2xl m-auto px-16 py-24 flex flex-col gap-16 max-md:px-4 max-md:py-8 max-md:gap-4 ">
-          <h1 className="text-32 text-gray-1000 font-bold max-md:text-20 text-center capitalize ">
-            Conheça nossos serviços
-          </h1>
-          <div className="">
-            {servicesSection.map((servicos, index) => (
-              <div key={index} className="flex flex-col gap-8 items-center">
-                <h2 className=" text-24 text-gray-800 font-medium max-md:text-18 capitalize">
-                  {servicos.title}
-                </h2>
-                <CarrouselServices>
-                  {servicos.card.map((item: ServiceItem) => (
-                    <CardService key={item.id} data={item} />
-                  ))}
-                </CarrouselServices>
-              </div>
+        <section className="max-w-screen-2xl m-auto px-16 py-24 flex items-center justify-between max-lg:flex-col  gap-16 max-md:px-4 max-md:py-8 max-md:gap-4 ">
+          <div className="flex flex-col gap-8 w-full">
+            {servicesSection.map((service) => (
+              <CardService key={service.id} data={service} />
             ))}
           </div>
+          <CarrouselServices>
+            {servicesSection.map((service) => (
+              <CardSlideService key={service.id} data={service} />
+            ))}
+          </CarrouselServices>
         </section>
       </main>
       <main id="location" className="bg-gray-0">
