@@ -68,7 +68,7 @@ export default async function Home() {
       </main>
       <main id="services" className="bg-gray-0">
         <section className="max-w-screen-2xl m-auto px-16 py-24 flex items-center justify-between max-lg:flex-col  gap-16 max-md:px-4 max-md:py-8 max-md:gap-4 ">
-          <div className="flex flex-col gap-8 w-full">
+          <div className="flex flex-col gap-8 w-full ">
             {servicesSection.map((service) => (
               <CardService key={service.id} data={service} />
             ))}

@@ -22,21 +22,21 @@ export const listServices = {
             image: imagemHenna,
             name: "designer personalizado Henna",
             description:
-              "Type and scrambled it to make a type specimen book. It has survived not only five centuries.",
+              "Achieve the perfect eyebrow shape with our professional shaping services. Our experienced eyebrow designers will assess your facial features and create a customized shape that enhances your natural beauty.",
           },
           {
             id: randomUUID(),
             image: imagemLamination,
             name: "designer tecnica Brown Lamination",
             description:
-              "Type and scrambled it to make a type specimen book. It has survived not only five centuries.",
+              "Achieve the perfect eyebrow shape with our professional shaping services. Our experienced eyebrow designers will assess your facial features and create a customized shape that enhances your natural beauty.",
           },
           {
             id: randomUUID(),
             image: imagemDespigmentacao,
             name: "Despigmentação de micropigmentação",
             description:
-              "Type and scrambled it to make a type specimen book. It has survived not only five centuries.",
+              "Achieve the perfect eyebrow shape with our professional shaping services. Our experienced eyebrow designers will assess your facial features and create a customized shape that enhances your natural beauty.",
           },
         ]
 

@@ -1,7 +1,9 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/pagination";
 
 export default function CarrouselServices({ children }: CarrouselProps) {
   return (
@@ -27,6 +29,8 @@ export default function CarrouselServices({ children }: CarrouselProps) {
         // }}
         slidesPerView={1}
         spaceBetween={16}
+        pagination={{ clickable: true }}
+        modules={[Pagination]}
         className=" mySwiper"
       >
         {children?.map((child, index) => (
