@@ -82,13 +82,10 @@ export default async function Home() {
       </main>
       <main id="location" className="bg-gray-0">
         <section className="max-w-screen-2xl m-auto px-16 py-24 flex flex-col justify-between gap-16 max-md:px-4 max-md:py-8 max-md:gap-4">
-          <h1 className="text-32 text-gray-1000 font-bold max-md:text-20 text-center capitalize ">
-            Conheça nosso espaço
-          </h1>
           <div className="flex w-full justify-between gap-16  max-md:flex-col ">
             <div className="flex w-full flex-col items-start ">
-              <h2 className="text-32 text-gray-900 font-semibold capitalize max-md:text-24 mb-6 max-md:mb-4  leading-normal ">
-                Bem localizado, receptivo e atraente.
+              <h2 className="text-32 text-gray-900 font-semibold max-md:text-24 mb-6 max-md:mb-4  leading-normal ">
+                Somos um espaço bem localizado, receptivo e atraente.
               </h2>
               <p className="text-16 text-gray-800 font-medium spece mb-4 max-md:text-18 max-md:mb-2 leading-normal">
                 Nosso espaço é todo equipado para trazer o maximo de conforto a
