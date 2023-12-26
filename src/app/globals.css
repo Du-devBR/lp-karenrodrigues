@@ -7,3 +7,14 @@
 
   -webkit-font-smoothing: antialiased;
 }
+
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  background-color: #fff !important;
+  margin: 12px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fff !important;
+}

@@ -23,7 +23,7 @@ export default async function Home() {
   return (
     <>
       <main id="about" className="bg-gray-0">
-        <section className=" max-w-screen-2xl m-auto px-16 py-24 flex items-center gap-16 max-lg:flex-col max-md:px-4 max-md:py-8 max-md:mb-0 relative">
+        <section className=" max-w-screen-2xl m-auto px-16 py-24 flex items-center gap-16 max-lg:flex-col max-md:px-4 max-md:pt-16 pb-8 max-md:mb-0 relative">
           {/* <svg
             viewBox="0 0 1024 1024"
             className="  absolute h-[45rem] w-[45rem] max-lg:h-[25rem] max-lg:w-[25rem] max-lg:top-1/2 -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
@@ -67,7 +67,7 @@ export default async function Home() {
         </section>
       </main>
       <main id="services" className="bg-gray-0">
-        <section className="max-w-screen-2xl m-auto px-16 py-24 flex items-center justify-between max-lg:flex-col  gap-16 max-md:px-4 max-md:py-8 max-md:gap-4 ">
+        <section className="max-w-screen-2xl m-auto px-16 py-24 flex items-center justify-between max-lg:flex-col  gap-16 max-md:px-4 max-md:py-8  ">
           <div className="flex flex-col gap-8 w-full ">
             {servicesSection.map((service) => (
               <CardService key={service.id} data={service} />

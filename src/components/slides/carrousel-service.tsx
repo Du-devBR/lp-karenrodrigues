@@ -1,9 +1,10 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Pagination, EffectFade } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 export default function CarrouselServices({ children }: CarrouselProps) {
   return (
@@ -29,14 +30,22 @@ export default function CarrouselServices({ children }: CarrouselProps) {
         // }}
         slidesPerView={1}
         spaceBetween={16}
+        // navigation={{ clickable: true }}
         pagination={{ clickable: true }}
         modules={[Pagination]}
-        className=" mySwiper"
+        className=" "
       >
         {children?.map((child, index) => (
           <SwiperSlide key={index}>{child}</SwiperSlide>
         ))}
       </Swiper>
+      {/* <style>
+        {`
+          .swiper-pagination-bullet-active {
+            background-color: #000 !important;
+          }
+          `}
+      </style> */}
     </div>
   );
 }
