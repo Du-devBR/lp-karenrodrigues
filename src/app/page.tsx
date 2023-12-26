@@ -67,7 +67,7 @@ export default async function Home() {
         </section>
       </main>
       <main id="services" className="bg-gray-0">
-        <section className="max-w-screen-2xl m-auto px-16 py-24 flex items-center justify-between max-lg:flex-col  gap-16 max-md:px-4 max-md:py-8  ">
+        <section className="max-w-screen-2xl m-auto px-16 py-24 flex items-center flex-row-reverse justify-between max-lg:flex-col  gap-16 max-md:px-4 max-md:py-8  ">
           <div className="flex flex-col gap-8 w-full ">
             {servicesSection.map((service) => (
               <CardService key={service.id} data={service} />
@@ -81,25 +81,28 @@ export default async function Home() {
         </section>
       </main>
       <main id="location" className="bg-gray-0">
-        <section className="max-w-screen-2xl m-auto px-16 py-24 flex flex-col gap-16 max-md:px-4 max-md:py-8 max-md:gap-4">
+        <section className="max-w-screen-2xl m-auto px-16 py-24 flex flex-col justify-between gap-16 max-md:px-4 max-md:py-8 max-md:gap-4">
           <h1 className="text-32 text-gray-1000 font-bold max-md:text-20 text-center capitalize ">
             Conheça nosso espaço
           </h1>
-          <div className="flex w-full justify-between gap-6 max-md:flex-col ">
-            <div className="flex flex-col 2xl:w-2/6 items-start">
-              <h2 className="text-32 text-gray-1000 font-bold mb-6 max-md:text-18 max-md:mb-4  leading-normal max-md:text-center">
+          <div className="flex w-full justify-between gap-16  max-md:flex-col ">
+            <div className="flex w-full flex-col items-start ">
+              <h2 className="text-32 text-gray-900 font-semibold capitalize max-md:text-24 mb-6 max-md:mb-4  leading-normal ">
                 Bem localizado, receptivo e atraente.
               </h2>
-              <p className="text-32 text-gray-800 font-medium spece mb-4 max-md:text-18 max-md:mb-2 leading-normal">
-                Estamos no coração de Brás Cubas em Mogi das Cruzes.
+              <p className="text-16 text-gray-800 font-medium spece mb-4 max-md:text-18 max-md:mb-2 leading-normal">
+                Nosso espaço é todo equipado para trazer o maximo de conforto a
+                nossos clientes, fzendo com que se sinta em casa, todo o
+                ambiente foi pensado em nossos cliente. Venha nos conhecer,
+                estamos no coração de Brás Cubas em Mogi das Cruzes.
               </p>
-              <span className="text-20 text-gray-800 font-medium spece max-md:text-14  leading-normal mb-8">
+              <span className="text-16 text-gray-800 font-medium spece max-md:text-14  leading-normal mb-8">
                 Rua Thuller, 467 - Jardim Universo, Mogi das Cruzes - SP,
                 08740-470
               </span>
               <ButtonCta data={listButtonCta.location} />
             </div>
-            <div className="w-full min-h-[372px] rounded-3xl overflow-hidden max-md:min-h-[255px] relative 2xl:w-2/4">
+            <div className="w-full min-h-[372px]  overflow-hidden max-md:min-h-[255px] relative ">
               <CarrouselLocation>
                 {listImagensLocation.imagens.map((imagens) => (
                   <Image
@@ -107,6 +110,7 @@ export default async function Home() {
                     src={imagens.picture}
                     alt=""
                     layout="fill"
+                    className="rounded-3xl"
                   />
                 ))}
               </CarrouselLocation>
