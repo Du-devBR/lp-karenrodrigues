@@ -83,7 +83,7 @@ export default async function Home() {
       <main id="location" className="bg-gray-0">
         <section className="max-w-screen-2xl m-auto px-16 py-24 flex flex-col justify-between gap-16 max-md:px-4 max-md:py-8 max-md:gap-4">
           <div className="flex w-full justify-between gap-16  max-md:flex-col ">
-            <div className="flex w-full flex-col items-start ">
+            <div className="flex w-full flex-col items-start max-md:items-center max-md:text-center  ">
               <h2 className="text-32 text-gray-900 font-semibold max-md:text-24 mb-6 max-md:mb-4  leading-normal ">
                 Somos um espaço bem localizado, receptivo e atraente.
               </h2>
@@ -117,17 +117,16 @@ export default async function Home() {
       </main>
       <main id="comments" className="bg-gray-0">
         <section className="max-w-screen-2xl m-auto px-16 py-24 flex flex-col gap-16 max-md:px-4 max-md:py-8 max-md:gap-4">
-          <h1 className="text-32 text-gray-1000 font-bold max-md:text-20 text-center">
-            O que nossos clientes dizem
-          </h1>
-          <cite className=" text-center text-14 text-gray-800">
-            Nossos corações se aquecem com o amor dos nossos clientes; nossa
-            maior satisfação reside em transformar vidas, demonstrando que todos
-            nós somos verdadeiramente maravilhosos.Nossos corações se aquecem
-            com o amor dos nossos clientes; nossa maior satisfação reside em
-            transformar vidas, demonstrando que todos nós somos verdadeiramente
-            maravilhosos.
-          </cite>
+          <div className="w-full max-md:text-center">
+            <h2 className="text-32 text-gray-900 font-semibold max-md:text-24 mb-6 max-md:mb-4  leading-normal ">
+              O que nossos clientes dizem
+            </h2>
+            <cite className="text-24 text-gray-500 font-light max-md:text-20">
+              “ Nossos corações se aquecem com o amor dos nossos clientes; nossa
+              maior satisfação reside em transformar vidas, demonstrando que
+              todos nós somos verdadeiramente maravilhosos.
+            </cite>
+          </div>
           <CarrouselComments>
             {dataComments.map((depoimento: CommentItem) => (
               <CardDepoimento key={depoimento.id} data={depoimento} />
