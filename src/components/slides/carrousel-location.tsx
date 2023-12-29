@@ -21,7 +21,7 @@ export default function CarrouselLocation({ children }: CarrouselProps) {
           modifier: 1,
           slideShadows: true,
         }}
-        initialSlide={1}
+        initialSlide={0}
         pagination={true}
         modules={[EffectCoverflow, Pagination]}
         className="mySwiper"

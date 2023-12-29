@@ -116,8 +116,8 @@ export default async function Home() {
         </section>
       </main>
       <main id="comments" className="bg-gray-0">
-        <section className="max-w-screen-2xl m-auto px-16 py-24 flex flex-col gap-16 max-md:px-4 max-md:py-8 max-md:gap-4">
-          <div className="w-full max-md:text-center">
+        <section className="max-w-screen-2xl m-auto px-16 py-24 flex flex-col gap-16 max-md:px-4 max-md:py-8 max-md:gap-8">
+          <div className="w-full text-center">
             <h2 className="text-32 text-gray-900 font-semibold max-md:text-24 mb-6 max-md:mb-4  leading-normal ">
               O que nossos clientes dizem
             </h2>
@@ -135,11 +135,11 @@ export default async function Home() {
         </section>
       </main>
       <main id="contact" className="bg-brand-200">
-        <section className="max-w-screen-2xl m-auto px-16 py-24 flex flex-col gap-16 max-md:px-4 max-md:py-8 max-md:gap-4 ">
-          <h1 className="text-32 text-gray-1000 font-bold max-md:text-20 text-center">
+        <section className="max-w-screen-2xl m-auto px-16 py-24 flex flex-col max-md:px-4 max-md:py-8 max-md:gap-4 text-center">
+          <h2 className="text-32 text-gray-900 font-semibold max-md:text-24 mb-6 max-md:mb-4  leading-normal">
             Entre em contato
-          </h1>
-          <p className="text-center text-16 text-gray-700 font-medium">
+          </h2>
+          <p className="text-16 text-gray-800 font-medium spece mb-4 max-md:text-18 max-md:mb-2 leading-normal ">
             Agende agora mesmo pelo nosso whatsapp e acesse nosso instragram
             para conhecer um pouco mais do nosso trabalho.
           </p>

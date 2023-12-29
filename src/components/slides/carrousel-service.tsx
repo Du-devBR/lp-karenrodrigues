@@ -8,12 +8,12 @@ import "swiper/css/effect-coverflow";
 
 export default function CarrouselServices({ children }: CarrouselProps) {
   return (
-    <div className="w-[46%] max-lg:w-full">
+    <div className="w-full max-lg:w-full rounded-lg overflow-hidden">
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
-        slidesPerView={2}
+        slidesPerView={1.5}
         coverflowEffect={{
           rotate: 50,
           stretch: 0,
@@ -21,7 +21,7 @@ export default function CarrouselServices({ children }: CarrouselProps) {
           modifier: 1,
           slideShadows: true,
         }}
-        initialSlide={2}
+        initialSlide={1}
         pagination={true}
         modules={[EffectCoverflow, Pagination]}
         className="mySwiper"
