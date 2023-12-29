@@ -16,7 +16,7 @@ describe("Home", () => {
   });
   it("render correct title on section 'servicos'", () => {
     const heading = screen.getByRole("heading", {
-      name: "Conheça nosso serviços",
+      name: "Micropigmentação",
     });
     expect(heading).toBeDefined();
   });
