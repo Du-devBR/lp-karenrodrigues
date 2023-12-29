@@ -2,10 +2,11 @@ import CardDepoimento from "@/components/card-depoimento";
 import CarrouselComments from "@/components/slides/carrousel-comment";
 
 interface CommentsDataProps {
-  data: any;
+  data: [];
 }
 
 export default function CommentsSection({ data }: CommentsDataProps) {
+  const commentsSection: ServiceItem[] = data;
   return (
     <main id="comments" className="bg-gray-0">
       <section className="max-w-screen-2xl m-auto px-16 py-24 flex flex-col gap-16 max-md:px-4 max-md:py-8 max-md:gap-8">
@@ -20,7 +21,7 @@ export default function CommentsSection({ data }: CommentsDataProps) {
           </cite>
         </div>
         <CarrouselComments>
-          {data.map((depoimento: CommentItem) => (
+          {commentsSection.map((depoimento: CommentItem) => (
             <CardDepoimento key={depoimento.id} data={depoimento} />
           ))}
         </CarrouselComments>
