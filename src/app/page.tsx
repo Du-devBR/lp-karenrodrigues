@@ -15,29 +15,16 @@ import { listButtonCta } from "@/assets/database/button-cta-data";
 import CardSlideService from "../components/card-slide-services";
 import CardService from "@/components/card-service";
 import AboutSection from "./_component/about-section";
+import ServiceSection from "./_component/services-section";
 
 export default async function Home() {
   const dataServices: ServiceData = await getDataServices();
   const dataComments = await getDataComments();
-  const servicesSection: ServiceItem[] = dataServices.services;
 
   return (
     <>
       <AboutSection />
-      <main id="services" className="bg-gray-0">
-        <section className="max-w-screen-2xl m-auto px-16 py-24 flex items-center flex-row-reverse justify-between max-lg:flex-col  gap-16 max-md:px-4 max-md:py-8  ">
-          <div className="flex flex-col gap-8 w-full ">
-            {servicesSection.map((service) => (
-              <CardService key={service.id} data={service} />
-            ))}
-          </div>
-          <CarrouselServices>
-            {servicesSection.map((service) => (
-              <CardSlideService key={service.id} data={service} />
-            ))}
-          </CarrouselServices>
-        </section>
-      </main>
+      <ServiceSection data={dataServices} />
       <main id="location" className="bg-gray-0">
         <section className="max-w-screen-2xl m-auto px-16 py-24 flex flex-col justify-between gap-16 max-md:px-4 max-md:py-8 max-md:gap-4">
           <div className="flex w-full justify-between gap-16  max-md:flex-col ">
