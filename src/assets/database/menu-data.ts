@@ -14,7 +14,7 @@ export const menuNavList: MenuItem[] = [
   },
   {
     title: "galeria",
-    href: "/galeria",
+    href: "/galery",
   },
   {
     title: "sobrancelhas",
